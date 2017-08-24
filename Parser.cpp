@@ -7,9 +7,7 @@
 
 MAIN_NAMESPACE_START
 PARSER_START
-    Parser::Parser() {
-
-    }
+    Parser::Parser() = default;
 
     Parser::Parser(LexerNamespace::Lexer lex) {
 

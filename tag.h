@@ -18,6 +18,18 @@ LEXER_START
     const int EQ { 261 };
     const int FALSE { 262 };
     const int GE { 263 };
+    const int ID { 264 };
+    const int IF { 265 };
+    const int INDEX { 266 };
+    const int LE { 267 };
+    const int MINUS { 268 };
+    const int NE { 269 };
+    const int NUM { 270 };
+    const int OR { 271 };
+    const int REAL { 272 };
+    const int TEMP { 273 };
+    const int TRUE { 274 };
+    const int WHILE { 275 };
 
 LEXER_END
 MAIN_NAMESPACE_END

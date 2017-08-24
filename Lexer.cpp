@@ -9,9 +9,7 @@ MAIN_NAMESPACE_START
 
 LEXER_START
 
-    Lexer::Lexer() {
-
-    }
+    Lexer::Lexer() = default;
 
 LEXER_END
 
