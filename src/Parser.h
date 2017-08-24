@@ -6,7 +6,7 @@
 #define PARSER_PARSER_H
 
 #include "Lexer.h"
-#include "lib.h"
+#include "../lib/lib.h"
 
 MAIN_NAMESPACE_START
 PARSER_START

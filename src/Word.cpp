@@ -14,7 +14,7 @@ LEXER_START
     Word::Word(string& s, int tag)
             :Token(tag)
     {
-        std::copy(s.begin(), s.end(), lexme);
+        std::copy(s.begin(), s.end(), std::back_inserter(lexme));
     }
 
     string Word::to_string() const

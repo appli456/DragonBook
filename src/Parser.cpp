@@ -3,7 +3,7 @@
 //
 
 #include "Parser.h"
-#include "lib.h"
+#include "../lib/lib.h"
 
 MAIN_NAMESPACE_START
 PARSER_START

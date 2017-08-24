@@ -5,7 +5,7 @@
 #ifndef PARSER_LEXER_H
 #define PARSER_LEXER_H
 
-#include "lib.h"
+#include "../lib/lib.h"
 
 MAIN_NAMESPACE_START
 LEXER_START

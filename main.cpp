@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Lexer.h"
-#include "Parser.h"
+#include "src/Lexer.h"
+#include "src/Parser.h"
 
 using DragonParser::ParserNamespace::Parser;
 using DragonParser::LexerNamespace::Lexer;

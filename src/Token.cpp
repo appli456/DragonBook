@@ -3,7 +3,7 @@
 //
 
 #include "Token.h"
-#include "lib.h"
+#include "../lib/lib.h"
 #include <string>
 
 MAIN_NAMESPACE_START

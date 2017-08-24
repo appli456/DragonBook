@@ -5,7 +5,7 @@
 #ifndef PARSER_NUM_H
 #define PARSER_NUM_H
 
-#include "lib.h"
+#include "../lib/lib.h"
 #include "Token.h"
 #include <string>
 using std::string;

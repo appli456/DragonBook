@@ -5,10 +5,11 @@
 #ifndef PARSER_WORD_H
 #define PARSER_WORD_H
 
-#include "lib.h"
+#include "../lib/lib.h"
 #include "Token.h"
 #include <string>
 #include <algorithm>
+#include <iterator>
 
 using std::string;
 
