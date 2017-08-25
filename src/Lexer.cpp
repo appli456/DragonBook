@@ -9,7 +9,30 @@ MAIN_NAMESPACE_START
 
 LEXER_START
 
-    Lexer::Lexer() = default;
+    Lexer::Lexer()
+    {
+
+    }
+
+    Token* Lexer::scan()
+    {
+
+    }
+
+    void Lexer::reserve(Word &w)
+    {
+
+    }
+
+    bool Lexer::read_char(char c)
+    {
+
+    }
+
+    void Lexer::read_char()
+    {
+
+    }
 
 LEXER_END
 

@@ -30,5 +30,12 @@
 // ------------------- namespace Lexer end -------------------
 
 
+// ------------------- namespace Symbol -------------------
+
+#define SYMBOL_START namespace SymbolNamespace {
+
+#define SYMBOL_END }
+
+// ------------------- namespace Symbol end -------------------
 
 #endif //PARSER_LIB_H
