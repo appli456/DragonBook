@@ -71,7 +71,7 @@ SYMBOL_START
 
     /**
      *
-     * @param t 
+     * @param t
      * @return
      */
     bool Type::operator==(Type t)

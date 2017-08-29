@@ -66,4 +66,6 @@
 
 #define BOOL_TOKEN "bool"
 
+#define ARRAY_TOKEN "[]"
+
 #endif //PARSER_LIB_H
