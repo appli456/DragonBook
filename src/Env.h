@@ -17,8 +17,7 @@ class Env
 {
 public:
     Env() = default;
-    explicit Env(Env e);
-    explicit Env(Env& e);
+    Env(const Env& e);
     explicit Env(Env const* e);
 
 protected:

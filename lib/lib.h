@@ -38,4 +38,32 @@
 
 // ------------------- namespace Symbol end -------------------
 
+#define AND_TOKEN "&&"
+
+#define OR_TOKEN "||"
+
+#define EQ_TOKEN "=="
+
+#define NE_TOKEN "!="
+
+#define LE_TOKEN "<="
+
+#define GE_TOKEN ">="
+
+#define MINUS_TOKEN "minus"
+
+#define TRUE_TOKEN "true"
+
+#define FALSE_TOKEN "false"
+
+#define TEMP_TOKEN "t"
+
+#define INT_TOKEN "int"
+
+#define FLOAT_TOKEN "float"
+
+#define CHAR_TOKEN "char"
+
+#define BOOL_TOKEN "bool"
+
 #endif //PARSER_LIB_H

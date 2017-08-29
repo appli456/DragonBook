@@ -14,10 +14,10 @@ using std::string;
 
 MAIN_NAMESPACE_START
 LEXER_START
-    typedef enum class {
+    enum class RealType {
         FLOAT,
         DOUBLE,
-    } RealType;
+    };
 
     typedef union {
         float f;

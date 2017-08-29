@@ -6,12 +6,8 @@
 
 MAIN_NAMESPACE_START
 SYMBOL_START
-    Env::Env(Env e) : Env(&e)
-    {
 
-    }
-
-    Env::Env(Env &e)
+    Env::Env(const Env &e)
     {
 
     }

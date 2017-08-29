@@ -14,7 +14,7 @@ MAIN_NAMESPACE_START
 LEXER_START
     class Lexer {
     public:
-        static int line = 1;
+        static int line;
 
         Lexer();
         Token* scan();

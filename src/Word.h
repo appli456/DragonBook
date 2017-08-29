@@ -20,34 +20,45 @@ LEXER_START
     public:
         Word();
         Word(string& s, int tag);
-        Word(string s, int tag);
+        Word(const char* s, int tag);
+
         string to_string() const override;
 
-        static const Word and_word{"&&", AND};
-        // And token define
-        static const Word or_word{"||", OR};
-        // Or token define
-        static const Word eq_word{"==", EQ};
-        // Equal token define
-        static const Word ne_word{"!=", NE};
-        // Not equal token define
-        static const Word le_word{"<=", LE};
-        // Less than or equal token define
-        static const Word ge_word{">=", GE};
-        // greater then or equal token define
-        static const Word minus_word{"minus", MINUS};
-        // Minus token define
-        static const Word true_word{"true", TRUE};
-        // True token define
-        static const Word false_word{"false", FALSE};
-        // False token define
-        static const Word temp_word{"t", TEMP};
-        // Temp token define
+        static const Word and_word;
+        // And token declare
+        static const Word or_word;
+        // Or token declare
+        static const Word eq_word;
+        // Equal token declare
+        static const Word ne_word;
+        // Not equal token declare
+        static const Word le_word;
+        // Less than or equal token declare
+        static const Word ge_word;
+        // greater then or equal token declare
+        static const Word minus_word;
+        // Minus token declare
+        static const Word true_word;
+        // True token declare
+        static const Word false_word;
+        // False token declare
+        static const Word temp_word;
+        // Temp token declare
 
-
-    protected:
         string lexme;
     };
+
+//    static const Word Word::and_word(AND_TOKEN, AND);
+//    static const Word Word::or_word(OR_TOKEN, OR);
+//    static const Word Word::eq_word(EQ_TOKEN, EQ);
+//    static const Word Word::ne_word(NE_TOKEN, NE);
+//    static const Word Word::le_word(LE_TOKEN, LE);
+//    static const Word Word::ge_word(GE_TOKEN, GE);
+//    static const Word Word::minus_word(MINUS_TOKEN, MINUS);
+//    static const Word Word::true_word(TRUE_TOKEN, TRUE);
+//    static const Word Word::false_word(FALSE_TOKEN, FALSE);
+//    static const Word Word::temp_word(TEMP_TOKEN, TEMP);
+
 LEXER_END
 MAIN_NAMESPACE_END
 

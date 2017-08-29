@@ -19,8 +19,6 @@ public:
 
     virtual string to_string() const;
     int get_tag() const;
-
-protected:
     int tag;
 };
 

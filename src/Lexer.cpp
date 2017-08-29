@@ -8,6 +8,7 @@
 MAIN_NAMESPACE_START
 
 LEXER_START
+    int Lexer::line = 1;
 
     Lexer::Lexer()
     {
