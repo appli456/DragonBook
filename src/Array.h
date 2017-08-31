@@ -5,18 +5,23 @@
 #ifndef PARSER_ARRAY_H
 #define PARSER_ARRAY_H
 
+#include<string>
 #include "./../lib/lib.h"
 #include "./../lib/tag.h"
-#include "./Type.h
+#include "./Type.h"
 MAIN_NAMESPACE_START
 SYMBOL_START
 
+using std::string;
 class Array : public Type {
 public:
-    Type const* of;
-    int size;
+    Type* of{nullptr};
+    int size{0};
     Array() = default;
     Array(int sz, Type p);
+    ~Array() override;
+
+    string to_string();
 };
 
 SYMBOL_END

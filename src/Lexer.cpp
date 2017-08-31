@@ -20,9 +20,10 @@ LEXER_START
 
     }
 
-    void Lexer::reserve(Word &w)
+    void Lexer::reserve(const Word* w)
     {
-
+        words[w->lexme] = w;
+        delete w;
     }
 
     bool Lexer::read_char(char c)

@@ -6,6 +6,7 @@
 #define PARSER_TYPE_H
 
 #include <string>
+#include <utility>
 
 #include "./../lib/lib.h"
 #include "./Word.h"
@@ -20,15 +21,20 @@ class Type : public LexerNamespace::Word
 public:
     int width; // For allocate memory
     Type();
+    Type(Type& t);
+    Type(Type&& t) noexcept;
     Type(const char* s, int tag, int w);
     Type(string& s, int tag, int w);
+    ~Type() override;
+
 
     static bool numeric(Type& t);
     static Type max (Type& t1, Type& t2);
 
 
     bool operator==(Type t);
-
+    Type& operator=(const Type& t);
+    Type& operator=(Type&& t) noexcept;
 
     static const Type Int, Float, Char, Bool;
 

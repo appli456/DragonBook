@@ -15,10 +15,16 @@ LEXER_START
 class Token {
 public:
     Token();
+    Token(const Token& t) = default;
+    Token(Token&& t) noexcept = default;
     explicit Token(int t);
 
+    virtual ~Token() = default;
+
+    Token& operator=(const Token& t) = default;
+    Token& operator=(Token&& v) noexcept = default;
+
     virtual string to_string() const;
-    int get_tag() const;
     int tag;
 };
 

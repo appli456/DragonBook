@@ -33,6 +33,23 @@ SYMBOL_START
         width = w;
     }
 
+    Type::Type(Type &t) : LexerNamespace::Word(t)
+    {
+        width = t.width;
+    }
+
+    Type::Type(Type &&t) noexcept :
+            LexerNamespace::Word(std::forward<Type>(t))
+    {
+        width = t.width;
+    }
+
+    Type::~Type()
+    {
+        LexerNamespace::Word::~Word();
+
+    }
+
     /**
      *
      * @param t
@@ -79,6 +96,16 @@ SYMBOL_START
         return (t.width == this->width) &&
                 (t.lexme == this->lexme) &&
                 (t.tag == this->tag);
+    }
+
+    Type& Type::operator=(const Type &t)
+    {
+
+    }
+
+    Type& Type::operator=(Type &&t) noexcept
+    {
+
     }
 
 SYMBOL_END

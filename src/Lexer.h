@@ -5,10 +5,16 @@
 #ifndef PARSER_LEXER_H
 #define PARSER_LEXER_H
 
+#include <unordered_map>
+#include <string>
+
 #include "../lib/lib.h"
+#include "./../lib/tag.h"
 #include "./Word.h"
 #include "./Token.h"
-#include <unordered_map>
+
+using std::unordered_map;
+using std::string;
 
 MAIN_NAMESPACE_START
 LEXER_START
@@ -16,11 +22,12 @@ LEXER_START
     public:
         static int line;
 
+        unordered_map<string, const Word*>words;
         Lexer();
         Token* scan();
     private:
         char peek = ' ';
-        void reserve(Word& w);
+        void reserve(const Word* w);
         void read_char();
         bool read_char(char c);
     };

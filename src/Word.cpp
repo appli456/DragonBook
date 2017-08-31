@@ -21,6 +21,15 @@ LEXER_START
         lexme = "";
     }
 
+    Word::Word(Word &&w) noexcept :
+            lexme(std::move(w.lexme)) {}
+
+    Word::Word(Word &w)
+            : Token(w)
+    {
+        lexme = w.lexme;
+    }
+
     Word::Word(string& s, int tag)
             :Token(tag)
     {
@@ -33,9 +42,30 @@ LEXER_START
         lexme = s;
     }
 
+    Word::~Word()
+    {
+        Token::~Token();
+        lexme.clear();
+    }
+
     string Word::to_string() const
     {
         return lexme;
+    }
+
+    Word& Word::operator=(const Word &w)
+    {
+        Token::operator=(w);
+        lexme = w.lexme;
+
+        return *this;
+    }
+
+    Word& Word::operator=(Word &&w) noexcept
+    {
+        lexme = std::move(w.lexme);
+        tag = w.tag;
+        return *this;
     }
 
 LEXER_END

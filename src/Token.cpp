@@ -20,8 +20,6 @@ LEXER_START
         return std::to_string(static_cast<char>(tag));
     }
 
-    int Token::get_tag() const {
-        return tag;
-    }
+
 LEXER_END
 MAIN_NAMESPACE_END

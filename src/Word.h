@@ -19,8 +19,15 @@ LEXER_START
     class Word : public Token{
     public:
         Word();
+        Word(Word& w);
+        Word(Word&& w) noexcept ;
         Word(string& s, int tag);
         Word(const char* s, int tag);
+
+        virtual ~Word();
+
+        Word& operator=(const Word& w);
+        Word& operator=(Word&& w) noexcept;
 
         string to_string() const override;
 
@@ -45,7 +52,7 @@ LEXER_START
         static const Word temp_word;
         // Temp token declare
 
-        string lexme;
+        string lexme = "";
     };
 
 //    static const Word Word::and_word(AND_TOKEN, AND);
