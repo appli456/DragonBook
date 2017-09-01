@@ -29,14 +29,17 @@ public:
 
 
     static bool numeric(Type& t);
-    static Type max (Type& t1, Type& t2);
+    static const Type* max (Type& t1, Type& t2);
 
 
-    bool operator==(Type t);
+    bool operator==(Type& t);
     Type& operator=(const Type& t);
     Type& operator=(Type&& t) noexcept;
 
-    static const Type Int, Float, Char, Bool;
+    static const Type* Int;
+    static const Type* Float;
+    static const Type* Char;
+    static const Type* Bool;
 
 };
 SYMBOL_END

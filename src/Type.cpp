@@ -7,14 +7,10 @@
 MAIN_NAMESPACE_START
 SYMBOL_START
 
-    const Type Type::Int =
-            { INT_TOKEN, LexerNamespace::BASIC, INT_SIZE};
-    const Type Type::Float =
-            { FLOAT_TOKEN, LexerNamespace::BASIC, FLOAT_SIZE };
-    const Type Type::Char =
-            { CHAR_TOKEN, LexerNamespace::BASIC, CHAR_SIZE };
-    const Type Type::Bool =
-            { BOOL_TOKEN, LexerNamespace::BASIC, BOOL_SIZE };
+    const Type* Type::Int = new Type(INT_TOKEN, LexerNamespace::BASIC, INT_SIZE);
+    const Type* Type::Float = new Type(FLOAT_TOKEN, LexerNamespace::BASIC, FLOAT_SIZE);
+    const Type* Type::Char = new Type(CHAR_TOKEN, LexerNamespace::BASIC, CHAR_SIZE);
+    const Type* Type::Bool = new Type(BOOL_TOKEN, LexerNamespace::BASIC, BOOL_SIZE);
 
     Type::Type()
     {
@@ -57,9 +53,9 @@ SYMBOL_START
      */
     bool Type::numeric(Type& t)
     {
-        return (t == Type::Int) ||
-                (t == Type::Float) ||
-                (t == Type::Char);
+        return (&t == Type::Int) ||
+                (&t == Type::Float) ||
+                (&t == Type::Char);
     }
 
     /**
@@ -68,17 +64,17 @@ SYMBOL_START
      * @param t2
      * @return
      */
-    Type Type::max(Type& t1, Type& t2)
+    const Type* Type::max(Type& t1, Type& t2)
     {
         if (!numeric(t1) || !numeric(t2))
         {
             return nullptr;
         }
-        else if (t1 == Type::Float || t2 == Type::Float)
+        else if (&t1 == Type::Float || &t2 == Type::Float)
         {
             return Type::Float;
         }
-        else if (t1 == Type::Int || t2 == Type::Int)
+        else if (&t1 == Type::Int || &t2 == Type::Int)
         {
             return Type::Int;
         }
@@ -91,7 +87,7 @@ SYMBOL_START
      * @param t
      * @return
      */
-    bool Type::operator==(Type t)
+    bool Type::operator==(Type& t)
     {
         return (t.width == this->width) &&
                 (t.lexme == this->lexme) &&
