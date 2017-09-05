@@ -94,14 +94,13 @@ SYMBOL_START
                 (t.tag == this->tag);
     }
 
-    Type& Type::operator=(const Type &t)
-    {
-
-    }
+    Type& Type::operator=(const Type &t) = default;
 
     Type& Type::operator=(Type &&t) noexcept
     {
-
+        LexerNamespace::Word::operator=(t);
+        width = t.width;
+        return *this;
     }
 
 SYMBOL_END

@@ -8,9 +8,16 @@
 
 MAIN_NAMESPACE_START
 LEXER_START
-    Token::Token() = default;
+    Token::Token() {
+        tag = 0;
+    };
 
     Token::Token(int t)
+    {
+        tag = t;
+    }
+
+    Token::Token(char t)
     {
         tag = t;
     }

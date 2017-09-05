@@ -18,6 +18,7 @@ public:
     Token(const Token& t) = default;
     Token(Token&& t) noexcept = default;
     explicit Token(int t);
+    explicit Token(char t);
 
     virtual ~Token() = default;
 

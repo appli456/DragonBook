@@ -31,7 +31,7 @@ LEXER_START
         Real();
         explicit Real(float v);
         explicit Real(double v);
-        string to_string() const;
+        string to_string() const override;
 
     private:
         RealValue value;

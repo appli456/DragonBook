@@ -5,16 +5,16 @@
 #include "Word.h"
 MAIN_NAMESPACE_START
 LEXER_START
-    const Word Word::and_word = { AND_TOKEN, AND };
-    const Word Word::or_word = { OR_TOKEN, OR };
-    const Word Word::eq_word = { EQ_TOKEN, EQ };
-    const Word Word::ne_word = { NE_TOKEN, NE };
-    const Word Word::le_word = { LE_TOKEN, LE };
-    const Word Word::ge_word = { GE_TOKEN, GE };
-    const Word Word::minus_word = { MINUS_TOKEN, MINUS };
-    const Word Word::true_word = { TRUE_TOKEN, TRUE };
-    const Word Word::false_word = { FALSE_TOKEN, FALSE };
-    const Word Word::temp_word = { TEMP_TOKEN, TEMP };
+    const Word* Word::and_word = new Word( AND_TOKEN, AND );
+    const Word* Word::or_word = new Word( OR_TOKEN, OR );
+    const Word* Word::eq_word = new Word( EQ_TOKEN, EQ );
+    const Word* Word::ne_word = new Word( NE_TOKEN, NE );
+    const Word* Word::le_word = new Word( LE_TOKEN, LE );
+    const Word* Word::ge_word = new Word( GE_TOKEN, GE );
+    const Word* Word::minus_word = new Word( MINUS_TOKEN, MINUS );
+    const Word* Word::true_word = new Word( TRUE_TOKEN, TRUE );
+    const Word* Word::false_word = new Word( FALSE_TOKEN, FALSE );
+    const Word* Word::temp_word = new Word( TEMP_TOKEN, TEMP );
 
     Word::Word()
     {
@@ -53,13 +53,7 @@ LEXER_START
         return lexme;
     }
 
-    Word& Word::operator=(const Word &w)
-    {
-        Token::operator=(w);
-        lexme = w.lexme;
-
-        return *this;
-    }
+    Word& Word::operator=(const Word &w) = default;
 
     Word& Word::operator=(Word &&w) noexcept
     {

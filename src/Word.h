@@ -24,32 +24,32 @@ LEXER_START
         Word(string& s, int tag);
         Word(const char* s, int tag);
 
-        virtual ~Word();
+        ~Word() override;
 
         Word& operator=(const Word& w);
         Word& operator=(Word&& w) noexcept;
 
         string to_string() const override;
 
-        static const Word and_word;
+        static const Word* and_word;
         // And token declare
-        static const Word or_word;
+        static const Word* or_word;
         // Or token declare
-        static const Word eq_word;
+        static const Word* eq_word;
         // Equal token declare
-        static const Word ne_word;
+        static const Word* ne_word;
         // Not equal token declare
-        static const Word le_word;
+        static const Word* le_word;
         // Less than or equal token declare
-        static const Word ge_word;
+        static const Word* ge_word;
         // greater then or equal token declare
-        static const Word minus_word;
+        static const Word* minus_word;
         // Minus token declare
-        static const Word true_word;
+        static const Word* true_word;
         // True token declare
-        static const Word false_word;
+        static const Word* false_word;
         // False token declare
-        static const Word temp_word;
+        static const Word* temp_word;
         // Temp token declare
 
         string lexme = "";

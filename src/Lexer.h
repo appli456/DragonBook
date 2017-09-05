@@ -7,14 +7,19 @@
 
 #include <unordered_map>
 #include <string>
+#include <cctype>
 
 #include "../lib/lib.h"
 #include "./../lib/tag.h"
 #include "./Word.h"
+#include "./Type.h"
 #include "./Token.h"
+#include "./Num.h"
+#include "./Real.h"
 
 using std::unordered_map;
 using std::string;
+
 
 MAIN_NAMESPACE_START
 LEXER_START
@@ -24,12 +29,15 @@ LEXER_START
 
         unordered_map<string, const Word*>words;
         Lexer();
-        Token* scan();
-    private:
-        char peek = ' ';
+        const Token* scan();
+
+        char peak = ' ';
         void reserve(const Word* w);
         void read_char();
         bool read_char(char c);
+
+    private:
+        const Token* _resolve();
     };
 LEXER_END
 MAIN_NAMESPACE_END
