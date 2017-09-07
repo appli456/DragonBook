@@ -38,6 +38,14 @@
 
 // ------------------- namespace Symbol end -------------------
 
+// ------------------- namespace Inter -------------------
+
+#define INTER_START namespace InterNamespace {
+
+#define INTER_END }
+
+// ------------------- namespace Inter End -------------------
+
 #define AND_TOKEN "&&"
 
 #define OR_TOKEN "||"
