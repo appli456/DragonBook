@@ -6,9 +6,9 @@
 #define PARSER_ARRAY_H
 
 #include<string>
-#include "./../lib/lib.h"
-#include "./../lib/tag.h"
-#include "./Type.h"
+#include "../../lib.h"
+#include "../../tag.h"
+#include "Type.h"
 MAIN_NAMESPACE_START
 SYMBOL_START
 

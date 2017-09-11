@@ -5,9 +5,9 @@
 #ifndef PARSER_REAL_H
 #define PARSER_REAL_H
 
-#include "./../lib/lib.h"
+#include "../lib.h"
 #include "Token.h"
-#include "./../lib/tag.h"
+#include "../tag.h"
 #include <string>
 
 using std::string;

@@ -3,8 +3,8 @@
 //
 
 #include "Num.h"
-#include "../lib/lib.h"
-#include "../lib/tag.h"
+#include "../lib.h"
+#include "../tag.h"
 #include <string>
 
 MAIN_NAMESPACE_START

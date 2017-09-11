@@ -6,12 +6,15 @@
 #define PARSER_ENV_H
 #include <unordered_map>
 
-#include "./../lib/lib.h"
-#include "./Token.h"
+#include "../../lib.h"
+#include "../Token.h"
+#include "../inter/Id.h"
 
 MAIN_NAMESPACE_START
 SYMBOL_START
 
+using LexerNamespace::Token;
+using InterNamespace::Id;
 using std::unordered_map;
 
 class Env
@@ -19,13 +22,15 @@ class Env
 public:
     Env() = default;
     Env(const Env& e);
-    explicit Env(Env const* e);
+    explicit Env(const Env* e);
+    void put(Token* tkn, Id* id);
+    const Id* get(Token* tkn);
 
 protected:
     Env* prev;
 
 private:
-
+    unordered_map<const Token*, const Id*>table;
 };
 
 SYMBOL_END

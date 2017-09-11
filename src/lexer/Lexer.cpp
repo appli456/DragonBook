@@ -3,7 +3,7 @@
 //
 
 #include "Lexer.h"
-#include "../lib/lib.h"
+#include "../lib.h"
 
 MAIN_NAMESPACE_START
 

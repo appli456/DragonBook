@@ -8,10 +8,10 @@
 #include <string>
 #include <utility>
 
-#include "./../lib/lib.h"
-#include "./Word.h"
-#include "./../lib/tag.h"
-#include "./../lib/size.h"
+#include "../../lib.h"
+#include "../Word.h"
+#include "../../tag.h"
+#include "../../size.h"
 
 using std::string;
 MAIN_NAMESPACE_START

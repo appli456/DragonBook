@@ -7,9 +7,9 @@
 
 #include <string>
 
-#include "./../lib/lib.h"
-#include "./Node.h"
-#include "./Token.h"
+#include "../../lib.h"
+#include "Node.h"
+#include "../Token.h"
 
 MAIN_NAMESPACE_START
 INTER_START
@@ -24,11 +24,11 @@ public:
     Expr(Token& tok, Type& t);
     ~Expr();
 
-    virtual Expr& gen();
-    virtual Expr& reduce();
+    virtual const Expr* gen();
+    virtual Expr* reduce();
     void jumping(int t, int f);
     void emit_jump(string test, int t, int f);
-    string to_string();
+    virtual string to_string() const;
 
     Token op;
     Type type;

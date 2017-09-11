@@ -6,7 +6,7 @@
 #define PARSER_TOKEN_H
 
 #include <string>
-#include "../lib/lib.h"
+#include "../lib.h"
 using std::string;
 
 MAIN_NAMESPACE_START

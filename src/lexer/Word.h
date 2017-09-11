@@ -5,9 +5,9 @@
 #ifndef PARSER_WORD_H
 #define PARSER_WORD_H
 
-#include "../lib/lib.h"
+#include "../lib.h"
 #include "Token.h"
-#include "./../lib/tag.h"
+#include "../tag.h"
 #include <string>
 #include <algorithm>
 #include <iterator>

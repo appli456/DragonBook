@@ -9,13 +9,13 @@
 #include <string>
 #include <cctype>
 
-#include "../lib/lib.h"
-#include "./../lib/tag.h"
-#include "./Word.h"
-#include "./Type.h"
-#include "./Token.h"
-#include "./Num.h"
-#include "./Real.h"
+#include "../lib.h"
+#include "../tag.h"
+#include "Word.h"
+#include "symbol/Type.h"
+#include "Token.h"
+#include "Num.h"
+#include "Real.h"
 
 using std::unordered_map;
 using std::string;

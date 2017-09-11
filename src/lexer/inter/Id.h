@@ -5,10 +5,10 @@
 #ifndef PARSER_ID_H
 #define PARSER_ID_H
 
-#include "./../lib/lib.h"
-#include "./Expr.h"
-#include "./Word.h"
-#include "./Type.h"
+#include "../../lib.h"
+#include "Expr.h"
+#include "../Word.h"
+#include "./../symbol/Type.h"
 
 MAIN_NAMESPACE_START
 INTER_START

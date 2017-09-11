@@ -9,8 +9,8 @@
 #include <string>
 #include <iostream>
 
-#include "./../lib/lib.h"
-#include "./Lexer.h"
+#include "../../lib.h"
+#include "../Lexer.h"
 MAIN_NAMESPACE_START
 INTER_START
 using std::string;

@@ -18,12 +18,12 @@ INTER_START
 
     }
 
-    Expr& Expr::gen() {
-        return *this;
+    const Expr* Expr::gen() {
+        return this;
     }
 
-    Expr& Expr::reduce() {
-        return *this;
+    Expr* Expr::reduce() {
+        return this;
     }
 
     void Expr::jumping(int t, int f) {
@@ -32,9 +32,10 @@ INTER_START
 
     void Expr::emit_jump(string test, int t, int f) {
         string expression;
+
         if (t != 0 && f != 0) {
             emit("if " + test + " goto L" + std::to_string(t));
-            emit("goto L" + std::to_string(f));
+            emit("goto L" + f);
         } else if (t != 0) {
             emit("if " + test + " goto L" + std::to_string(t));
         } else if (f != 0) {
@@ -42,7 +43,7 @@ INTER_START
         }
     }
 
-    string Expr::to_string() {
+    string Expr::to_string() const {
         return op.to_string();
     }
 
